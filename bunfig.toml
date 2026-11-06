@@ -1,0 +1,10 @@
+[test]
+coverage = true
+coverageThreshold = 0.8
+
+[fmt]
+semi = false
+singleQuote = true
+sortImports = true
+sortPackageJson = true
+jsdoc = true

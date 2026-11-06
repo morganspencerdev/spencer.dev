@@ -1,0 +1,14 @@
+{
+  "name": "spencer.dev",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "bun fmt && bun lint && bun check && bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}

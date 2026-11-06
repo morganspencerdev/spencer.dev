@@ -1,0 +1,25 @@
+{
+  "name": "spencer.dev",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:24",
+  "postCreateCommand": "curl -fsSL https://bun.sh/install | bash && . ~/.bashrc && bun install",
+  "features": {
+    "ghcr.io/devcontainers/features/git-lfs:1": {
+      "autoPull": true
+    }
+  },
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Application",
+      "onAutoForward": "openBrowserOnce"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "editorconfig.editorconfig",
+        "jacobcassidy.css-nesting-syntax-highlighting"
+      ]
+    }
+  }
+}
