@@ -10,6 +10,7 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "resolveJsonModule": true,
+    "moduleDetection": "force",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "types": ["bun", "node"]
   }

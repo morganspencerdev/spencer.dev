@@ -1,0 +1,125 @@
+#skip-link {
+  align-items: center;
+  background-color: var(--color-canvas);
+  block-size: calc(var(--site-frame-width) - 0.5rem);
+  color: var(--color-text);
+  display: flex;
+  inset-block-start: 0.25rem;
+  inset-inline-start: 0.25rem;
+  opacity: 0;
+  padding-inline: 0.5rem;
+  pointer-events: none;
+  position: fixed;
+  text-decoration: none;
+  z-index: 50;
+
+  &:focus-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+header,
+footer {
+  align-items: stretch;
+  background-color: inherit;
+  block-size: var(--site-frame-width);
+  display: flex;
+  gap: 1rem;
+  grid-column: 1 / -1;
+  padding-inline: var(--site-padding-inline);
+  position: sticky;
+
+  @media screen and (min-width: 768px) {
+    padding-inline: var(--site-frame-width);
+  }
+
+  nav {
+    align-items: stretch;
+    display: flex;
+    gap: 0.5rem;
+    margin-inline-start: auto;
+  }
+
+  a {
+    align-items: center;
+    display: flex;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+header {
+  font-family: var(--font-heading);
+  inset-block-start: 0;
+  z-index: 20;
+
+  a[href='#main'] {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+}
+
+theme-picker {
+  display: contents;
+
+  label {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+
+    &:has(:focus-visible) {
+      outline: 1px auto Highlight;
+      outline: 1px auto -webkit-focus-ring-color;
+    }
+  }
+
+  input {
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  &:has(input:checked) {
+    svg:last-of-type {
+      display: none;
+    }
+  }
+
+  &:has(input:not(:checked)) {
+    svg:first-of-type {
+      display: none;
+    }
+  }
+}
+
+footer {
+  inset-block-end: 0;
+  z-index: 0;
+
+  @media screen and (min-width: 768px) {
+    z-index: 20;
+  }
+
+  p {
+    align-self: center;
+    font-size: 0.75rem;
+  }
+
+  svg {
+    inline-size: 1.25rem;
+  }
+}
+
+main {
+  background-color: var(--color-canvas);
+  color: var(--color-text);
+  position: relative;
+  z-index: 10;
+
+  @media screen and (min-width: 768px) {
+    margin-inline: var(--site-frame-width);
+  }
+}

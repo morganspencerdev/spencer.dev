@@ -1,0 +1,52 @@
+:root {
+  color-scheme: light dark;
+
+  --color-brand: #3d348b;
+  --color-on-primary: contrast-color(var(--color-brand));
+  --color-accent: light-dark(
+    var(--color-brand),
+    oklch(from var(--color-brand) 0.79 min(c, 0.16) h / 1)
+  );
+
+  --color-canvas: light-dark(
+    oklch(from var(--color-brand) 0.975 min(c, 0.012) h / 1),
+    oklch(from var(--color-brand) 0.145 min(c, 0.018) h / 1)
+  );
+  --color-surface: light-dark(
+    oklch(from var(--color-brand) 0.995 min(c, 0.010) h / 1),
+    oklch(from var(--color-brand) 0.205 min(c, 0.022) h / 1)
+  );
+  --color-surface-raised: light-dark(
+    oklch(from var(--color-brand) 1 min(c, 0.006) h / 1),
+    oklch(from var(--color-brand) 0.25 min(c, 0.024) h / 1)
+  );
+
+  --color-text: light-dark(
+    oklch(from var(--color-brand) 0.24 min(c, 0.025) h / 1),
+    oklch(from var(--color-brand) 0.94 min(c, 0.018) h / 1)
+  );
+  --color-text-muted: light-dark(
+    oklch(from var(--color-brand) 0.46 min(c, 0.025) h / 1),
+    oklch(from var(--color-brand) 0.76 min(c, 0.025) h / 1)
+  );
+
+  --color-border: light-dark(
+    oklch(from var(--color-accent) 0.84 min(c, 0.02) h / 1),
+    oklch(from var(--color-accent) 0.33 min(c, 0.025) h / 1)
+  );
+
+  --font-body:
+    'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', 'Noto Sans', Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-heading:
+    'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', 'Noto Sans', Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono:
+    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+
+  --site-frame-width: 3rem;
+  --site-padding-inline: 5.62vi;
+}

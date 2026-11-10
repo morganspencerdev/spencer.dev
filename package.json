@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "bun --hot index.html",
+    "build": "rm -rf dist && bun build index.html --target=browser --outdir=dist --splitting --minify",
     "verify": "bun fmt && bun lint && bun check && bun test"
   },
   "devDependencies": {

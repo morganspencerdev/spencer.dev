@@ -1,0 +1,15 @@
+:root:has(theme-picker input:not(:checked)) {
+  color-scheme: light;
+}
+
+:root:has(theme-picker input:checked) {
+  color-scheme: dark;
+}
+
+:root[data-theme='airbnb'] {
+  --color-brand: #fd5c63;
+}
+
+:root[data-theme='reddit'] {
+  --color-brand: #ff4500;
+}
