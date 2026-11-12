@@ -1,8 +1,6 @@
 import { rm } from 'node:fs/promises'
 import { basename, resolve } from 'node:path'
 
-import type { BunPlugin } from 'bun'
-
 const root = process.cwd()
 const dist = resolve(root, 'dist')
 
