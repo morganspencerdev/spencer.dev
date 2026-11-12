@@ -36,6 +36,7 @@ section {
   p {
     color: var(--color-accent);
     font-size: clamp(1.5rem, 4vi, 5rem);
+    font-weight: 600;
     line-height: 1;
   }
 }

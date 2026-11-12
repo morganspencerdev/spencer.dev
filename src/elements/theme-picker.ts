@@ -1,8 +1,6 @@
 const COLOR_SCHEME_KEY = 'colorScheme'
 const CUSTOM_THEME_KEY = 'theme'
 
-const themes = new Set(['airbnb', 'reddit'])
-
 class ThemePickerElement extends HTMLElement {
   #switch: HTMLInputElement | null = null
 
@@ -15,11 +13,7 @@ class ThemePickerElement extends HTMLElement {
     if (url.searchParams.has(CUSTOM_THEME_KEY)) {
       const theme = url.searchParams.get(CUSTOM_THEME_KEY)
 
-      if (theme && themes.has(theme)) {
-        localStorage.setItem(CUSTOM_THEME_KEY, theme)
-      } else {
-        localStorage.removeItem(CUSTOM_THEME_KEY)
-      }
+      if (theme) localStorage.setItem(CUSTOM_THEME_KEY, theme)
 
       url.searchParams.delete(CUSTOM_THEME_KEY)
       history.replaceState(history.state, '', url)
@@ -27,9 +21,7 @@ class ThemePickerElement extends HTMLElement {
 
     const customTheme = localStorage.getItem(CUSTOM_THEME_KEY)
 
-    if (customTheme && themes.has(customTheme)) {
-      document.documentElement.dataset.theme = customTheme
-    }
+    if (customTheme) document.documentElement.dataset.theme = customTheme
 
     const savedColorScheme = localStorage.getItem(COLOR_SCHEME_KEY)
     const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches

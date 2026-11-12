@@ -27,8 +27,9 @@ footer {
   display: flex;
   gap: 1rem;
   grid-column: 1 / -1;
+  inline-size: 100%;
   padding-inline: var(--site-padding-inline);
-  position: sticky;
+  position: fixed;
 
   @media screen and (min-width: 768px) {
     padding-inline: var(--site-frame-width);
@@ -116,6 +117,7 @@ footer {
 main {
   background-color: var(--color-canvas);
   color: var(--color-text);
+  margin-block: var(--site-frame-width);
   position: relative;
   z-index: 10;
 

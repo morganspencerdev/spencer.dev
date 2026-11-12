@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "bun --hot index.html",
-    "build": "rm -rf dist && bun build index.html --target=browser --outdir=dist --splitting --minify",
+    "build": "bun scripts/build.ts",
+    "preview": "bunx serve dist -l 4173",
     "verify": "bun fmt && bun lint && bun check && bun test"
   },
   "devDependencies": {

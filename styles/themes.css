@@ -8,6 +8,17 @@
 
 :root[data-theme='airbnb'] {
   --color-brand: #fd5c63;
+  --color-on-primary: var(--color-canvas);
+}
+
+:root[data-theme='facebook'] {
+  --color-brand: #1877F2;
+  --color-on-primary: var(--color-canvas);
+}
+
+:root[data-theme='google'] {
+  --color-brand: #4285f4;
+  --color-on-primary: var(--color-canvas);
 }
 
 :root[data-theme='reddit'] {
