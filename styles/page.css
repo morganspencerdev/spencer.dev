@@ -25,7 +25,7 @@ section {
 
   img {
     border-radius: 100%;
-    inline-size: clamp(150px, 15vi, 300px);
+    inline-size: clamp(125px, 15vi, 250px);
     margin-block-start: calc(-1 * var(--site-frame-width));
     outline-offset: 6px;
     outline-width: 4px;
@@ -53,6 +53,7 @@ section {
 
   fieldset {
     align-items: stretch;
+    align-self: end;
     background-color: inherit;
     border: none;
     display: flex;
@@ -82,7 +83,7 @@ section {
       font-size: 0.875rem;
       font-weight: 600;
       justify-content: center;
-      padding: 0.5rem 0.25rem;
+      padding: 1rem 0.25rem;
       position: relative;
       text-align: center;
 

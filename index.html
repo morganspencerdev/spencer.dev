@@ -95,12 +95,6 @@
     <header>
       <a href="#main">spencer.dev</a>
 
-      <nav aria-label="Primary">
-        <a href="#experience">Experience</a>
-        <a href="#stack">Stack</a>
-        <a href="#connect">Connect</a>
-      </nav>
-
       <theme-picker>
         <label>
           <svg
@@ -136,7 +130,46 @@
           </svg>
         </label>
       </theme-picker>
+
+      <button
+        type="button"
+        command="show-modal"
+        commandfor="menu-drawer"
+        aria-label="Open menu"
+      >
+        <svg
+          aria-hidden="true"
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+          ></path>
+        </svg>
+      </button>
     </header>
+
+    <dialog id="menu-drawer" closedby="any" aria-label="Site menu">
+      <button
+        type="button"
+        command="close"
+        commandfor="menu-drawer"
+        aria-label="Close menu"
+      >
+        &times;
+      </button>
+
+      <nav aria-label="Primary">
+        <a href="#experience" command="close" commandfor="menu-drawer">
+          Experience
+        </a>
+        <a href="#stack" command="close" commandfor="menu-drawer">Stack</a>
+        <a href="#connect" command="close" commandfor="menu-drawer">Connect</a>
+      </nav>
+    </dialog>
 
     <main id="main" tabindex="-1">
       <section id="hero">

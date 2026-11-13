@@ -35,18 +35,16 @@ footer {
     padding-inline: var(--site-frame-width);
   }
 
-  nav {
-    align-items: stretch;
-    display: flex;
-    gap: 0.5rem;
-    margin-inline-start: auto;
-  }
-
   a {
     align-items: center;
     display: flex;
     font-weight: 500;
     text-decoration: none;
+  }
+
+  svg {
+    block-size: 1.25rem;
+    inline-size: auto;
   }
 }
 
@@ -59,6 +57,11 @@ header {
     font-size: 1.125rem;
     font-weight: 700;
   }
+
+  button[commandfor='menu-drawer'] {
+    align-items: center;
+    display: flex;
+  }
 }
 
 theme-picker {
@@ -68,6 +71,7 @@ theme-picker {
     align-items: center;
     cursor: pointer;
     display: flex;
+    margin-inline-start: auto;
     position: relative;
 
     &:has(:focus-visible) {
@@ -96,6 +100,80 @@ theme-picker {
   }
 }
 
+#menu-drawer {
+  background-color: inherit;
+  block-size: 100svb;
+  border: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  inset: unset;
+  inset-inline-end: 0;
+  max-block-size: unset;
+  max-inline-size: unset;
+  overflow-y: auto;
+  padding-block: var(--site-frame-width);
+  padding-inline: var(--site-padding-inline);
+  position: fixed;
+  transform: translateX(100%);
+  transition:
+    transform 300ms ease-in-out,
+    display 300ms allow-discrete,
+    overlay 300ms allow-discrete;
+
+  @media screen and (min-width: 768px) {
+    padding-inline: var(--site-frame-width);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  &[open] {
+    transform: translateX(0);
+  }
+
+  &::backdrop {
+    background-color: transparent;
+  }
+
+  button[command='close'] {
+    align-items: center;
+    block-size: var(--site-frame-width);
+    display: flex;
+    inset-block-start: 0;
+    inset-inline-end: var(--site-padding-inline);
+    font-size: 2rem;
+    position: fixed;
+
+    @media screen and (min-width: 768px) {
+      inset-inline-end: var(--site-frame-width);
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  a {
+    align-items: center;
+    display: flex;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+@starting-style {
+  #menu-drawer[open] {
+    transform: translateX(100%);
+  }
+}
+
 footer {
   inset-block-end: 0;
   z-index: 0;
@@ -109,8 +187,11 @@ footer {
     font-size: 0.75rem;
   }
 
-  svg {
-    inline-size: 1.25rem;
+  nav {
+    align-items: stretch;
+    display: flex;
+    gap: 1rem;
+    margin-inline-start: auto;
   }
 }
 
