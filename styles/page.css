@@ -87,6 +87,11 @@ section {
       position: relative;
       text-align: center;
 
+      &:hover {
+        background-color: var(--color-canvas);
+        color: var(--color-text);
+      }
+
       &:has(:focus-visible) {
         outline: 1px auto Highlight;
         outline: 1px auto -webkit-focus-ring-color;
@@ -196,5 +201,19 @@ section {
     font-weight: 600;
     line-height: 1;
     padding: 0.75rem;
+  }
+}
+
+#connect {
+  form {
+    grid-column-start: 2;
+
+    p {
+      margin-block-end: 1rem;
+    }
+  }
+
+  button[type='submit'] {
+    margin-inline-start: auto;
   }
 }

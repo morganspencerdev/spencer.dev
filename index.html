@@ -407,6 +407,49 @@
 
       <section id="connect">
         <h2>Connect</h2>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <p>
+            Reach out directly at
+            <a href="mailto:morgan@spencer.dev">morgan@spencer.dev</a> or
+            through the form below.
+          </p>
+
+          <input
+            type="hidden"
+            name="access_key"
+            value="ff2f9ef9-78a1-4a9d-8b33-0948ce047b76"
+          />
+
+          <input
+            type="text"
+            name="name"
+            required
+            aria-label="Name"
+            placeholder="Ada Lovelace"
+            autocomplete="name"
+            autocapitalize="words"
+          />
+
+          <input
+            type="email"
+            name="email"
+            required
+            aria-label="Email"
+            placeholder="ada@analyticalengine.com"
+            autocomplete="email"
+            inputmode="email"
+          />
+
+          <textarea
+            name="message"
+            required
+            aria-label="Message"
+            placeholder="Leave a message..."
+          ></textarea>
+
+          <button type="submit">Send &rarr;</button>
+        </form>
       </section>
     </main>
 

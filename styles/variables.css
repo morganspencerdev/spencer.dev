@@ -2,7 +2,7 @@
   color-scheme: light dark;
 
   --color-brand: #3d348b;
-  --color-on-primary: contrast-color(var(--color-brand));
+  --color-on-primary: contrast-color(var(--color-accent));
   --color-accent: light-dark(
     var(--color-brand),
     oklch(from var(--color-brand) 0.79 min(c, 0.16) h / 1)
