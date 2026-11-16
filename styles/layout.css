@@ -41,11 +41,6 @@ footer {
     font-weight: 500;
     text-decoration: none;
   }
-
-  svg {
-    block-size: 1.25rem;
-    inline-size: auto;
-  }
 }
 
 header {
@@ -61,6 +56,11 @@ header {
   button[commandfor='menu-drawer'] {
     align-items: center;
     display: flex;
+  }
+
+  svg {
+    block-size: 1.25rem;
+    inline-size: auto;
   }
 }
 
@@ -105,7 +105,7 @@ theme-picker {
   block-size: 100svb;
   border: none;
   color: inherit;
-  display: flex;
+  display: none;
   flex-direction: column;
   inline-size: 100%;
   inset: unset;
@@ -131,6 +131,7 @@ theme-picker {
   }
 
   &[open] {
+    display: flex;
     transform: translateX(0);
   }
 
@@ -174,6 +175,10 @@ theme-picker {
   }
 }
 
+body:has(#menu-drawer[open]) {
+  overflow: hidden;
+}
+
 footer {
   inset-block-end: 0;
   z-index: 0;
@@ -192,6 +197,11 @@ footer {
     display: flex;
     gap: 1rem;
     margin-inline-start: auto;
+  }
+
+  svg {
+    block-size: auto;
+    inline-size: 1.25rem;
   }
 }
 

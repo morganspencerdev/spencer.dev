@@ -35,3 +35,5 @@ await Bun.build({
 for (const [fileName, sourcePath] of fontAssetMap) {
   await Bun.write(`dist/${fileName}`, Bun.file(sourcePath))
 }
+
+await Bun.write('dist/social.webp', Bun.file('./images/social.webp'))
