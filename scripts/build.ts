@@ -1,8 +1,9 @@
-import { rm } from 'node:fs/promises'
+import { cp, rm } from 'node:fs/promises'
 import { basename, resolve } from 'node:path'
 
 const root = process.cwd()
 const dist = resolve(root, 'dist')
+const publicDir = resolve(root, 'public')
 
 await rm(dist, {
   recursive: true,
@@ -36,4 +37,4 @@ for (const [fileName, sourcePath] of fontAssetMap) {
   await Bun.write(`dist/${fileName}`, Bun.file(sourcePath))
 }
 
-await Bun.write('dist/social.webp', Bun.file('./images/social.webp'))
+await cp(publicDir, dist, { recursive: true })
