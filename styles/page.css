@@ -161,7 +161,7 @@ section {
       content: '+';
       display: flex;
       font-size: 1.75rem;
-      font-weight: 200;
+      font-weight: 300;
       inline-size: 1ch;
       justify-content: center;
     }

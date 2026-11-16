@@ -37,3 +37,116 @@
   font-weight: 100 800;
   font-display: swap;
 }
+
+/* CUSTOM FONTS */
+
+@font-face {
+  font-family: 'Airbnb Cereal';
+  src: url('../fonts/AirbnbCereal.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('../fonts/GoogleSans.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans Code';
+  src: url('../fonts/GoogleSansCode.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeueLight.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeueMedium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeueBold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeueHeavy.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HubSpot Sans';
+  src: url('../fonts/HubSpotSans-Book.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HubSpot Sans';
+  src: url('../fonts/HubSpotSans-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HubSpot Serif';
+  src: url('../fonts/HubSpotSerif-Book.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HubSpot Serif';
+  src: url('../fonts/HubSpotSerif-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Optimistic';
+  src: url('../fonts/Optimistic.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Reddit Sans';
+  src: url('../fonts/RedditSans.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Reddit Mono';
+  src: url('../fonts/RedditMono.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}

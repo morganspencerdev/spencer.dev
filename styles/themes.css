@@ -9,18 +9,42 @@
 :root[data-theme='airbnb'] {
   --color-brand: #fd5c63;
   --color-on-primary: var(--color-canvas);
+  --font-body: 'Airbnb Cereal';
+  --font-heading: var(--font-body);
 }
 
 :root[data-theme='facebook'] {
   --color-brand: #1877F2;
   --color-on-primary: var(--color-canvas);
+  --font-body: 'Optimistic';
+  --font-heading: var(--font-body);
 }
 
 :root[data-theme='google'] {
   --color-brand: #4285f4;
   --color-on-primary: var(--color-canvas);
+  --font-body: 'Google Sans';
+  --font-heading: var(--font-body);
+  --font-mono: 'Google Sans Code';
+}
+
+:root[data-theme='homedepot'] {
+  --color-brand: #f96302;
+  --color-on-primary: var(--color-canvas);
+  --font-body: 'Helvetica Neue';
+  --font-heading: var(--font-body);
+}
+
+:root[data-theme='hubspot'] {
+  --color-brand: #ff4800;
+  --color-on-primary: var(--color-canvas);
+  --font-body: 'HubSpot Sans';
+  --font-heading: 'HubSpot Serif';
 }
 
 :root[data-theme='reddit'] {
   --color-brand: #ff4500;
+  --font-body: 'Reddit Sans';
+  --font-heading: var(--font-body);
+  --font-mono: 'Reddit Mono';
 }
