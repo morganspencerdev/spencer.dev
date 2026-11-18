@@ -1,0 +1,18 @@
+html {
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+  inline-size: 100%;
+  min-block-size: 100svb;
+}

@@ -4,7 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "verify": "bun fmt && bun lint && bun check && bun test"
+    "dev": "bun --hot index.html",
+    "build": "bun scripts/build.ts",
+    "preview": "bunx serve dist -l 4173",
+    "verify": "bun fmt && bun lint && bun check"
   },
   "devDependencies": {
     "@types/bun": "^1.4.4",

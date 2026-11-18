@@ -1,0 +1,36 @@
+:root:has(#dark-mode:not(:checked)) {
+  color-scheme: light;
+}
+
+:root:has(#dark-mode:checked) {
+  color-scheme: dark;
+}
+
+:root[data-theme='airbnb'] {
+  --color-brand: #fd5c63;
+  --color-on-accent: var(--color-canvas);
+}
+
+:root[data-theme='facebook'] {
+  --color-brand: #1877F2;
+  --color-on-accent: var(--color-canvas);
+}
+
+:root[data-theme='google'] {
+  --color-brand: #4285f4;
+  --color-on-accent: var(--color-canvas);
+}
+
+:root[data-theme='homedepot'] {
+  --color-brand: #f96302;
+  --color-on-accent: var(--color-canvas);
+}
+
+:root[data-theme='hubspot'] {
+  --color-brand: #ff4800;
+  --color-on-accent: var(--color-canvas);
+}
+
+:root[data-theme='reddit'] {
+  --color-brand: #ff4500;
+}
