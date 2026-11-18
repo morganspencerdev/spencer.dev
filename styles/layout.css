@@ -123,11 +123,14 @@ header:not(main header) {
       display: grid;
       grid-template-rows: 0fr;
 
-      /* Transition the row track smoothly and delay hiding until the exit wipe completes */
       transition:
         grid-template-rows 0.35s ease,
         content-visibility 0.35s ease allow-discrete,
         display 0.35s ease allow-discrete;
+
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
     }
   }
 
@@ -224,6 +227,10 @@ main {
   position: relative;
   transition: margin-block-start 300ms ease-in-out;
   z-index: 10;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 body:has(header:not(header main) details[open]) main {
