@@ -16,3 +16,20 @@ body {
   inline-size: 100%;
   min-block-size: 100svb;
 }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+}
+
+img {
+  block-size: auto;
+  inline-size: 100%;
+}
+
+main::selection {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+}

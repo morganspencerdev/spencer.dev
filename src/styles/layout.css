@@ -61,7 +61,7 @@ header:not(main header) {
     inline-size: auto;
   }
 
-  > [href='/'] {
+  > a:first-child {
     block-size: var(--site-frame-width);
     font-size: 1.125rem;
     font-weight: 700;
@@ -107,11 +107,15 @@ header:not(main header) {
     gap: 1rem;
     grid-column: 1 / -1;
     margin-inline: calc(-1 * var(--site-padding-inline));
+    min-inline-size: 0;
     overflow-inline: auto;
+    padding-block: 0.5rem;
     padding-inline: var(--site-padding-inline);
 
     label {
       align-items: center;
+      aspect-ratio: 1 / 1;
+      border-radius: 1rem;
       cursor: pointer;
       display: flex;
       flex: 1 1 0%;
@@ -120,11 +124,17 @@ header:not(main header) {
       font-weight: 500;
       gap: 0.25rem;
       justify-content: center;
+      padding: 0.5rem;
       text-align: center;
 
       &:has(:focus-visible) {
         outline: 1px auto Highlight;
         outline: 1px auto -webkit-focus-ring-color;
+      }
+
+      &:has(input:checked) {
+        background-color: var(--color-surface);
+        color: var(--color-accent);
       }
     }
 

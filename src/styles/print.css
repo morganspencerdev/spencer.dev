@@ -1,4 +1,12 @@
+@page {
+  size: auto;
+}
+
 @media print {
+  :root {
+    color-scheme: light;
+  }
+
   header:not(main header),
   footer:not(main footer) {
     display: none;
@@ -6,5 +14,6 @@
 
   main {
     min-block-size: 0;
+    padding: 0;
   }
 }

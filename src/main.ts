@@ -60,7 +60,6 @@ layoutOptions?.addEventListener('change', (event) => {
 
   if (!loadLayout(target.value)) return
 
-  main?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   localStorage.setItem('layout', target.value)
 })
 
