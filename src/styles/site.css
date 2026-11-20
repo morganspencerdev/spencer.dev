@@ -1,9 +1,11 @@
-@layer fonts, variables, themes, resets, base, components, utilities, layout, page;
+@layer fonts, variables, themes, resets, base, components, utilities, layout, page, print;
 
 @import './fonts.css' layer(fonts);
 @import './variables.css' layer(variables);
 @import './themes.css' layer(themes);
 @import './resets.css' layer(resets);
 @import './base.css' layer(base);
+@import './components.css' layer(components);
 @import './utilities.css' layer(utilities);
 @import './layout.css' layer(layout);
+@import './print.css' layer(print);

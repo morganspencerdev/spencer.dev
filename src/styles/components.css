@@ -1,0 +1,32 @@
+.checkbox-switch {
+  align-items: stretch;
+  cursor: pointer;
+  display: flex;
+
+  &:has(:focus-visible) {
+    outline: 1px auto Highlight;
+    outline: 1px auto -webkit-focus-ring-color;
+  }
+
+  svg {
+    align-self: center;
+
+    &:first-of-type {
+      display: block;
+    }
+
+    &:last-of-type {
+      display: none;
+    }
+  }
+
+  &:has(:checked) {
+    svg:first-of-type {
+      display: none;
+    }
+
+    svg:last-of-type {
+      display: block;
+    }
+  }
+}

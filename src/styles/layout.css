@@ -68,51 +68,9 @@ header:not(main header) {
     margin-inline-end: auto;
   }
 
-  label {
-    align-items: stretch;
+  label:has(#dark-mode) {
     block-size: var(--site-frame-width);
-    cursor: pointer;
-    display: flex;
     padding-inline: 0.5rem;
-
-    &:has(:checked) {
-      svg:first-of-type {
-        display: none;
-      }
-
-      svg:last-of-type {
-        display: block;
-      }
-    }
-
-    &:has(:focus-visible) {
-      outline: 1px auto Highlight;
-      outline: 1px auto -webkit-focus-ring-color;
-    }
-
-    svg {
-      align-self: center;
-
-      &:first-of-type {
-        display: block;
-      }
-
-      &:last-of-type {
-        display: none;
-      }
-    }
-
-    input[type='checkbox'] {
-      block-size: 1px;
-      border-width: 0;
-      clip-path: inset(50%);
-      inline-size: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      white-space: nowrap;
-    }
   }
 
   details {
@@ -142,8 +100,9 @@ header:not(main header) {
     padding-inline: 0.5rem;
   }
 
-  nav {
+  fieldset {
     block-size: calc(2 * var(--site-frame-width));
+    border: none;
     display: flex;
     gap: 1rem;
     grid-column: 1 / -1;
@@ -151,8 +110,9 @@ header:not(main header) {
     overflow-inline: auto;
     padding-inline: var(--site-padding-inline);
 
-    a {
+    label {
       align-items: center;
+      cursor: pointer;
       display: flex;
       flex: 1 1 0%;
       flex-direction: column;
@@ -161,6 +121,11 @@ header:not(main header) {
       gap: 0.25rem;
       justify-content: center;
       text-align: center;
+
+      &:has(:focus-visible) {
+        outline: 1px auto Highlight;
+        outline: 1px auto -webkit-focus-ring-color;
+      }
     }
 
     svg {

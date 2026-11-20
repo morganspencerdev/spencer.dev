@@ -1,41 +1,97 @@
-const darkModeToggle = document.getElementById(
-  'dark-mode',
-) as HTMLInputElement | null
-
-if (darkModeToggle) {
-  const dark = localStorage.getItem('dark')
-
-  darkModeToggle.checked = dark
-    ? dark === 'true'
-    : window.matchMedia('(prefers-color-scheme: dark)').matches
-}
-
-const siteHeader = document.querySelector('header:not(main header)')
-const siteFooter = document.querySelector('footer:not(main footer)')
-
-siteHeader?.addEventListener('focusin', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-})
-siteFooter?.addEventListener('focusin', () => {
-  window.scrollTo({
-    top: document.documentElement.scrollHeight,
-    behavior: 'smooth',
-  })
-})
-
 const url = new URL(window.location.href)
 
-const CUSTOM_THEME_KEY = 'theme'
+// DARK MODE
 
-if (url.searchParams.has(CUSTOM_THEME_KEY)) {
-  const theme = url.searchParams.get(CUSTOM_THEME_KEY)
+const darkModeToggle = document.querySelector<HTMLInputElement>('#dark-mode')
 
-  if (theme) localStorage.setItem(CUSTOM_THEME_KEY, theme)
+if (darkModeToggle) {
+  const savedPreference = localStorage.getItem('dark')
 
-  url.searchParams.delete(CUSTOM_THEME_KEY)
+  darkModeToggle.checked =
+    savedPreference === null
+      ? window.matchMedia('(prefers-color-scheme: dark)').matches
+      : savedPreference === 'true'
+
+  darkModeToggle.addEventListener('change', () => {
+    localStorage.setItem('dark', String(darkModeToggle.checked))
+  })
+}
+
+// LAYOUT
+
+const main = document.querySelector('main')
+const layoutOptions =
+  document.querySelector<HTMLFieldSetElement>('#layout-options')
+
+function loadLayout(name: string): boolean {
+  const template = document.querySelector<HTMLTemplateElement>(
+    `template[data-layout="${CSS.escape(name)}"]`,
+  )
+
+  if (!main || !template) return false
+
+  main.replaceChildren(template.content.cloneNode(true))
+  main.dataset.layout = name
+
+  return true
+}
+
+const requestedLayout =
+  url.searchParams.get('layout') ??
+  localStorage.getItem('layout') ??
+  'editorial'
+
+const layout = loadLayout(requestedLayout) ? requestedLayout : 'editorial'
+
+if (layout !== requestedLayout) loadLayout(layout)
+
+const selectedRadio = layoutOptions?.querySelector<HTMLInputElement>(
+  `input[type="radio"][value="${CSS.escape(layout)}"]`,
+)
+
+if (selectedRadio) selectedRadio.checked = true
+
+layoutOptions?.addEventListener('change', (event) => {
+  const target = event.target
+
+  if (!(target instanceof HTMLInputElement) || target.type !== 'radio') {
+    return
+  }
+
+  if (!loadLayout(target.value)) return
+
+  main?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  localStorage.setItem('layout', target.value)
+})
+
+// CUSTOM THEME
+
+const themeParam = url.searchParams.get('theme')
+
+if (themeParam !== null) {
+  if (themeParam) localStorage.setItem('theme', themeParam)
+
+  url.searchParams.delete('theme')
   history.replaceState(history.state, '', url)
 }
 
-const customTheme = localStorage.getItem(CUSTOM_THEME_KEY)
+const theme = localStorage.getItem('theme')
 
-if (customTheme) document.documentElement.dataset.theme = customTheme
+if (theme) document.documentElement.dataset.theme = theme
+
+// HEADER / FOOTER FOCUS
+
+document
+  .querySelector('header:not(main header)')
+  ?.addEventListener('focusin', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  })
+
+document
+  .querySelector('footer:not(main footer)')
+  ?.addEventListener('focusin', () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    })
+  })

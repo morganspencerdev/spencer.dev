@@ -7,10 +7,10 @@
       "autoPull": true
     }
   },
-  "forwardPorts": [3000, 4173],
+  "forwardPorts": [5173, 4173],
   "portsAttributes": {
-    "3000": {
-      "label": "Application",
+    "5173": {
+      "label": "Dev",
       "onAutoForward": "openBrowserOnce"
     },
     "4173": {

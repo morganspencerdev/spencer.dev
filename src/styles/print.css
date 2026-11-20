@@ -1,0 +1,10 @@
+@media print {
+  header:not(main header),
+  footer:not(main footer) {
+    display: none;
+  }
+
+  main {
+    min-block-size: 0;
+  }
+}

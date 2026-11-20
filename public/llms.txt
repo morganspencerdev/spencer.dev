@@ -1,0 +1,19 @@
+
+# Morgan Spencer - Software Engineering & Architecture
+
+> The official personal website of Morgan Spencer, a lead software engineer focused on frontend architecture, reusable component systems, web accessibility, and modern web development.
+
+Morgan Spencer's experience spans software engineering, web strategy, digital communications, digital marketing, and design. He earned an MBA from The Citadel and a bachelor's degree from Philadelphia University.
+
+This is a single-page website. The links to Experience and Tech Stack below point to sections of the homepage, not separate pages.
+
+## Website
+
+- [Official website](https://spencer.dev/): Morgan Spencer's canonical personal website and professional overview.
+- [Experience](https://spencer.dev/#experience): Professional experience, including his lead software engineering role at Booz Allen Hamilton and earlier roles at The Citadel, CBC Industries, and Sylogent, plus education and a broader timeline.
+- [Tech Stack](https://spencer.dev/#stack): Technologies and interests including HTML, CSS, TypeScript, Web Components, web accessibility, React, Node.js, and AI.
+
+## Professional Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/morganspencerdev): Morgan Spencer's professional profile.
+- [GitHub](https://github.com/morganspencerdev): Morgan Spencer's GitHub profile.
