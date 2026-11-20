@@ -71,10 +71,18 @@ header:not(main header) {
   label:has(#dark-mode) {
     block-size: var(--site-frame-width);
     padding-inline: 0.5rem;
+
+    @media (scripting: none) {
+      grid-column-start: 3;
+    }
   }
 
   details {
     display: contents;
+
+    @media (scripting: none) {
+      display: none;
+    }
 
     &::details-content {
       grid-column: 1 / -1;
